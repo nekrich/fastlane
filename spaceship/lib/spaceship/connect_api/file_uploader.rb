@@ -45,7 +45,7 @@ module Spaceship
         puts("Uploading complete!") if Spaceship::Globals.verbose?
       end
 
-      def self.with_retry(tries = 5, &_block)
+      def self.with_retry(tries = 5, &)
         tries = 1 if Object.const_defined?(:SpecHelper)
         response = yield
 
